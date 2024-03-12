@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+
+* {
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --darkblue: hsl(212, 21%, 14%);
+  --Darkgray: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  background-color: var(--Cream);
+  display: flex;
+  height: 100%;
+  font-family: Fraunces, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+body {
+  display: flex;
+  margin: auto;
+  max-width: 710px;
+}
+
+label {
+  font-variant: all-small-caps;
+  color: var(--Darkgray);
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 5px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin-block: 15px;
+}
+
+.perfume {
+  display: flex;
+  background-color: var(--White);
+  max-width: 300px;
+  border-radius: 10px 0px 0px 10px;
+  
+  img {
+    border-radius: 10px 0px 0px 10px;
+    max-width: 100%;
+  }
+}
+
+.perfumesmall {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  background-color: var(--White);
+  padding: 30px; 
+  border-radius: 0px 10px 10px 0px;
+}
+
+.price {
+  display: flex;
+  padding-block: 10px;
+  margin-bottom: 15px;
+}
+
+.current {
+  color: var(--Darkcyan);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.old {
+  display: flex;
+  align-self: center;
+  color: var(--Darkgray);
+  font-family: Montserrat, sans-serif;
+  text-decoration: strikethrough;
+  font-size: 13px;
+  padding-inline: 20px;
+  text-decoration: line-through;
+}
+
+p {
+  font-size: 14px;
+  color: var(--Darkgray);
+  font-family: Montserrat, sans-serif;
+  line-height: 1.6;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--Darkcyan);
+  color: var(--White);
+  font-family: Montserrat, sans-serif;
+  padding-block: 15px;
+  font-weight: 700;
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+button::before {
+  content: url(/images/icon-cart.svg);
+  display: flex;
+  padding-right: 15px;
+  align-items: baseline;
+}
+
+button:hover {
+  background-color: var(--darkblue);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+@media screen and (max-width: 650px) {
+
+  body {
+    flex-direction: column;
+    padding: 20px;
+    width: auto;
+  }
+    
+  .perfume {
+    display: none;
+}
+
+  .perfumesmall {
+    display: flex;
+    max-width: 345px;
+    background-color: var(--White);
+    border-radius: 10px 10px 0px 0px;
+  
+  img {
+    border-radius: 10px 10px 0px 0px;
+    max-width: 100%;
+  }
+}
+
+  .container {
+    max-width: 100%;
+    max-width: 295px;
+    padding: 20px 25px 30px 25px; 
+    border-radius: 0px 0px 10px 10px;
+  }
+  
+}
+
+  </style>
+
+</head>
+<body>
+
+  <div class="perfume"><img src="/images/image-product-desktop.jpg" alt="perfume product"></div>
+  <div class="perfumesmall"><img src="/images/image-product-mobile.jpg" alt="perfume product"></div>
+
+  <div class="container">
+
+    <label for="Perfume">Perfume</label>
+
+    <h1>Gabrielle Essence Eau De Parfum</h1>
+
+    <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+    Perfumer-Creator for the House of CHANEL.</p>
+
+    <div class="price">
+      <div class="current">$149.99</div>
+      <div class="old">$169.99</div>
+    </div>
+
+    <button>Add to Cart</button>
+
+  </div>
+
+</body>
+</html>
